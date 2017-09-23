@@ -1,0 +1,25 @@
+# dependencies
+/node_modules
+
+# IDEs and editors
+/.idea
+*.iml
+/.vscode
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+
+# misc
+*halflings*
+*bundle*
+*.log
+/e2e/*.js
+/e2e/*.map
+
+#System Files
+.DS_Store
+Thumbs.db
+
+target/

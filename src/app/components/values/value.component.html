@@ -1,0 +1,22 @@
+<div class="row">
+    <div class="col-xs-12">
+        <table class="table table-bordered table-striped">
+            <thead>
+            <tr>
+                <th>Value</th>
+                <th>Actions</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let value of values; let e = even;">
+                <td>{{value.value}}</td>
+                <td><a [routerLink]="['/edit', value.id]">Edit</a> </td>
+            </tbody>
+        </table>
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-12">
+        <a [routerLink]="['/create']">New Value</a>
+    </div>
+</div>

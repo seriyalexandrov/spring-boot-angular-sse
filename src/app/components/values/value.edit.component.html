@@ -1,0 +1,18 @@
+<div class="row">
+    <div class="col-xs-12">
+        <form [formGroup]="valueModel" class="form-horizontal" (ngSubmit)="updateValue(valueModel)">
+            <input type="hidden" formControlName="id"/>
+            <input type="hidden" formControlName="version"/>
+            <div class="form-group">
+                <label for="value" class="col-xs-2">Value</label>
+                <div class="col-xs-6">
+                    <input class="form-control" placeholder="Value" formControlName="value"/>
+                    <span [hidden]="!valueModel.hasError('required', 'value')">Value is required..</span>
+                    <span [hidden]="!valueModel.hasError('minlength', 'value')">At least 2 characters in length</span>
+                </div>
+            </div>
+            <input type="submit" class="btn btn-primary" value="Submit"/>
+            <a [routerLink]="['/list']">List Values</a>
+        </form>
+    </div>
+</div>
